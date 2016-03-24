@@ -8,5 +8,7 @@ namespace LojaVirtual.Models
     public class ProdutoViewModel
     {
         public string Nome { get; set; }
+
+        public string Categoria { get; set; }
     }
 }

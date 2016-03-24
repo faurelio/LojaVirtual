@@ -1,0 +1,15 @@
+﻿@model List<LojaVirtual.Models.ProdutoViewModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.Nome</td>
+            <td>@item.Categoria</td>
+        </tr>
+    }
+</table>

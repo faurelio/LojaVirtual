@@ -1,9 +1,13 @@
-﻿using System;
+﻿using AutoMapper;
+using LojaVirtual.Models;
+using Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Mvc;
 
 namespace LojaVirtual.Controllers
 {
@@ -11,19 +15,11 @@ namespace LojaVirtual.Controllers
     {
         public ActionResult Lista()
         {
-            var lista = new List<ProdutoViewModel>
-            {
-                new ProdutoViewModel
-                {
-                    Nome = "Chuteira Nike",
-                    Categoria = "Calçados"
-                },
-                new ProdutoViewModel
-                {
-                    Nome = "Camisa Adidas",
-                    Categoria = "Roupas"
-                }
-            };
+            var produtos = new Produtos();
+
+            var listaProdutos = produtos.Lista();
+
+            var lista = Mapper.Map<IList<ProdutoViewModel>>(listaProdutos);
 
             return View(lista);
         }

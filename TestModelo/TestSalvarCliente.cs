@@ -10,9 +10,11 @@ namespace TestModelo
         [TestMethod]
         public void Salvar()
         {
-            using (var session = NHibernate.OpenSession())
+            using (var session = NHibernateHelper.OpenSession())
             {
-                session.Save(new Cliente());
+                session.Save(new Produto { Nome = "Chuteira Nike T90"});
+                session.Flush();
+
             }
         }
 

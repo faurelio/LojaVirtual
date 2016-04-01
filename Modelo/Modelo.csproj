@@ -64,7 +64,7 @@
     <Compile Include="Clientes.cs" />
     <Compile Include="Matematica.cs" />
     <Compile Include="Produto.cs" />
-    <Compile Include="ProdutoMapper.cs" />
+    <Compile Include="ProdutoMap.cs" />
     <Compile Include="Produtos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

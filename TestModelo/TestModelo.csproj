@@ -60,7 +60,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="NHibernateHelper.cs" />
-    <Compile Include="TestSalvarCliente.cs" />
+    <Compile Include="TestSalvarProduto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

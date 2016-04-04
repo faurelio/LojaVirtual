@@ -10,31 +10,11 @@ namespace Modelo
     {
         public IList<Produto> Lista()
         {
-            var produtos = new List<Produto>();
-
-            var produto1 = new Produto
+            using(var session = NHibernateHelper.OpenSession())
             {
-                Nome = "Chuteria Nike T90",
-                Categoria = new Categoria
-                {
-                    Nome = "Calçados"
-                }
-            };
-
-            produtos.Add(produto1);
-
-            var produto2 = new Produto
-            {
-                Nome = "Camisa Adidas",
-                Categoria = new Categoria
-                {
-                    Nome = "Roupas"
-                }
-            };
-
-            produtos.Add(produto2);
-
-            return produtos;
+                return session.QueryOver<Produto>()
+                              .List();
+            }
         }
     }
 }

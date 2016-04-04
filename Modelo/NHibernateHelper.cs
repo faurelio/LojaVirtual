@@ -5,7 +5,7 @@ using NHibernate.Cfg.MappingSchema;
 using NHibernate.Mapping.ByCode;
 using System.Collections.Generic;
 
-namespace TestModelo
+namespace Modelo
 {
     public static class NHibernateHelper
     {

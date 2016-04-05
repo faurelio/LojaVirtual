@@ -4,6 +4,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<h2>Lista de Produtos</h2>
+
+<a href="@Url.Action("Editar","Produto")" style="float: right;">Novo Produto</a>
+
 <table>
     @foreach(var item in Model)
     {

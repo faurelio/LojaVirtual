@@ -12,7 +12,7 @@ namespace TestModelo
         {
             using (var session = NHibernateHelper.OpenSession())
             {
-                var produto = new Produto { Nome = "Chuteira Nike T90" };
+                var produto = new Produto { Nome = "Chuteira Adidas" };
 
                 session.Save(produto);
                 session.Flush();

@@ -9,7 +9,7 @@ namespace Modelo
 {
     public class Produto
     {
-        public virtual Guid Id { get; set; }
+        public virtual Guid? Id { get; set; }
 
         public virtual string Nome { get; set; }
 

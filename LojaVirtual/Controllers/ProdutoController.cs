@@ -24,5 +24,27 @@ namespace LojaVirtual.Controllers
             return View(lista);
         }
 
+        public ActionResult Editar()
+        {
+            return View();
+        }
+
+        [System.Web.Mvc.HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Editar(ProdutoViewModel viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var produtos = new Produtos();
+
+                var produto = Mapper.Map<Produto>(viewModel);
+
+                produtos.Salvar(produto);
+
+                return RedirectToAction("Lista");
+            }
+
+            return View(viewModel);
+        }
     }
 }

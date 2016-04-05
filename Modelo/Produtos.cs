@@ -16,5 +16,14 @@ namespace Modelo
                               .List();
             }
         }
+
+        public virtual void Salvar(Produto produto)
+        {
+            using (var session = NHibernateHelper.OpenSession())
+            {
+                session.SaveOrUpdate(produto);
+                session.Flush();
+            }
+        }
     }
 }

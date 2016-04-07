@@ -1,9 +1,9 @@
 ﻿@model LojaVirtual.Models.ProdutoViewModel
 @{
-    ViewBag.Title = "Novo Produto";
+    ViewBag.Title = Model == null || Model.Id == null ? "Novo Produto" : "Editando Produto";
 }
 
-<h2>Novo Produto</h2>
+<h2>@(Model == null || Model.Id == null ? "Novo" : "Editando") Produto</h2>
 
 @using (Html.BeginForm("Editar", "Produto", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {

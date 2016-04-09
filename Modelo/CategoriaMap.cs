@@ -2,13 +2,12 @@
 
 namespace Modelo
 {
-    public class ProdutoMap : ClassMap<Produto>
+    public class CategoriaMap : ClassMap<Categoria>
     {
-        public ProdutoMap()
+        public CategoriaMap()
         {
             Id(x => x.Id).GeneratedBy.GuidComb();
             Map(x => x.Nome);
-            References(x => x.Categoria);
         }
     }
 }

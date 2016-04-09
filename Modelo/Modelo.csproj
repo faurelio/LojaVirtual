@@ -62,6 +62,7 @@
     <Compile Include="Categoria.cs" />
     <Compile Include="NHibernateHelper.cs" />
     <Compile Include="Produto.cs" />
+    <Compile Include="CategoriaMap.cs" />
     <Compile Include="ProdutoMap.cs" />
     <Compile Include="Produtos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

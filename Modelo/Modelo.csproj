@@ -64,6 +64,7 @@
     <Compile Include="Produto.cs" />
     <Compile Include="CategoriaMap.cs" />
     <Compile Include="ProdutoMap.cs" />
+    <Compile Include="Categorias.cs" />
     <Compile Include="Produtos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

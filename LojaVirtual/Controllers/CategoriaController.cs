@@ -15,7 +15,7 @@ namespace LojaVirtual.Controllers
     {
         public ActionResult Lista()
         {
-            var categoria = new Categorias();
+            var categorias = new Categorias();
 
             var listaCategorias = categorias.Lista();
 

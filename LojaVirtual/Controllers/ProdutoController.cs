@@ -3,10 +3,6 @@ using LojaVirtual.Models;
 using Modelo;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
 using System.Web.Mvc;
 
 namespace LojaVirtual.Controllers
@@ -19,7 +15,7 @@ namespace LojaVirtual.Controllers
 
             var listaProdutos = produtos.Lista();
 
-            var lista = Mapper.Map<IList<ProdutoViewModel>>(listaProdutos);
+            var lista = Mapper.Map<IList<ProdutoListaViewModel>>(listaProdutos);
 
             return View(lista);
         }

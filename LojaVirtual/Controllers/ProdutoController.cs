@@ -22,21 +22,30 @@ namespace LojaVirtual.Controllers
 
         public ActionResult Editar(Guid? id = null)
         {
+            ProdutoViewModel viewModel; 
+
             if (id != null)
             {
                 var produtos = new Produtos();
 
                 var produto = produtos.Por(id);
 
-                var viewModel = Mapper.Map<ProdutoViewModel>(produto);
-
-                return View(viewModel);
+                viewModel = Mapper.Map<ProdutoViewModel>(produto);
+            } else
+            {
+                viewModel = new ProdutoViewModel();
             }
 
-            return View();
+            var categorias = new Categorias();
+
+            var listaCategorias = categorias.Lista();
+
+            viewModel.Categorias = Mapper.Map<IList<CategoriaViewModel>>(listaCategorias);
+
+            return View(viewModel);
         }
 
-        [System.Web.Mvc.HttpPost]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Editar(ProdutoViewModel viewModel)
         {

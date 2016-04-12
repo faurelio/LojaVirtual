@@ -10,7 +10,7 @@ namespace LojaVirtual.Models
     {
         public Guid? Id { get; set; }
 
-        [Required(ErrorMessage = "Nome é obrigatório.")]
+       // [Required(ErrorMessage = "Nome é obrigatório.")]
         public string Nome { get; set; }
     }
 }

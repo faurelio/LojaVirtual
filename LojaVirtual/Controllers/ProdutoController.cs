@@ -59,6 +59,11 @@ namespace LojaVirtual.Controllers
 
                 return RedirectToAction("Lista");
             }
+            var categorias = new Categorias();
+
+            var listaCategorias = categorias.Lista();
+
+            viewModel.Categorias = Mapper.Map<IList<CategoriaViewModel>>(listaCategorias);
 
             return View(viewModel);
         }

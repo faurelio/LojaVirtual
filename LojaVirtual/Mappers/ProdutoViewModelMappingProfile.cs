@@ -14,7 +14,7 @@ namespace LojaVirtual.Mappers
             Mapper.CreateMap<Produto, ProdutoViewModel>();
 
             Mapper.CreateMap<ProdutoViewModel, Produto>()
-                  .ForMember(dest => dest.Categoria, opt => opt.Ignore());
+                  ;
         }
     }
 }

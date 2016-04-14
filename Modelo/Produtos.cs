@@ -16,6 +16,8 @@ namespace Modelo
                              
                                         .Fetch(p => p.Categoria)
                                         .Eager
+                                        .Fetch(p => p.Fornecedor)
+                                        .Eager
                                         .List();
             }
         }
@@ -33,7 +35,13 @@ namespace Modelo
         {
             using (var session = NHibernateHelper.OpenSession())
             {
-                return session.Get<Produto>(id);
+                return session.QueryOver<Produto>()
+                    .Where(p => p.Id == id)
+                    .Fetch(p => p.Categoria)
+                    .Eager
+                    .Fetch(p => p.Fornecedor)
+                    .Eager
+                    .SingleOrDefault();
             }
         }
 

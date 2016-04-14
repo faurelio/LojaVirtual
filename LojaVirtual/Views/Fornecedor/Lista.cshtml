@@ -1,0 +1,24 @@
+﻿@model List<LojaVirtual.Models.FornecedorViewModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de Fornecedores</h2>
+
+<a href="@Url.Action("Editar","Fornecedor")" style="float: right;">Nova Fornecedor</a>
+
+<table>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.Nome</td>
+            
+            <td>
+                @Html.ActionLink("Editar", "Editar", "Fornecedor", new { id = item.Id }, null)
+                |
+                @Html.ActionLink("Apagar", "Apagar", "Fornecedor", new { id = item.Id }, null)
+            </td>
+        </tr>
+    }
+</table>

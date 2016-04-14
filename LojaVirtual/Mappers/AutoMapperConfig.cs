@@ -13,7 +13,8 @@ namespace LojaVirtual.Mappers
             Mapper.Initialize(x =>
             {
                 x.AddProfile<ProdutoViewModelMappingProfile>();
-                x.AddProfile<CategoriaViewModelMappingProfile>();
+                x.AddProfile<FornecedorViewModelMappingProfile>();
+                x.AddProfile<FornecedorViewModelMappingProfile>();
             });
         }
     }

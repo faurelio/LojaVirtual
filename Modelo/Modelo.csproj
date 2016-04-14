@@ -59,6 +59,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fornecedor.cs" />
+    <Compile Include="Fornecedores.cs" />
+    <Compile Include="FornecedorMap.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="NHibernateHelper.cs" />
     <Compile Include="Produto.cs" />

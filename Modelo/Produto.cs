@@ -14,5 +14,6 @@ namespace Modelo
         public virtual string Nome { get; set; }
 
         public virtual Categoria Categoria { get; set; }
+        public virtual Categoria Fornecedor { get; set; }
     }
 }

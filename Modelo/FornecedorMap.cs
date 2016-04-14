@@ -2,14 +2,14 @@
 
 namespace Modelo
 {
-    public class ProdutoMap : ClassMap<Produto>
+    public class FornecedorMap : ClassMap<Fornecedor>
     {
-        public ProdutoMap()
+        public FornecedorMap()
         {
             Id(x => x.Id).GeneratedBy.GuidComb();
             Map(x => x.Nome);
-            References(x => x.Categoria);
-            References(x => x.Fornecedor);
+            Map(x => x.Endereco);
+            Map(x => x.Cidade);
         }
     }
 }

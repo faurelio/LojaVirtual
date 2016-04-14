@@ -14,6 +14,10 @@ namespace LojaVirtual.Models
         [Required(ErrorMessage = "Categoria é obrigatório.")]
         public CategoriaViewModel Categoria { get; set; }
 
+
+        [Required(ErrorMessage = "Fornecedor é obrigatório.")]
+        public CategoriaViewModel Fornecedor { get; set; }
+
         public IList<CategoriaViewModel> Categorias { get; set; }
     }
 }
